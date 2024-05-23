@@ -7,10 +7,6 @@ class ProductInformation extends React.Component{
 
     render(){
         const {target, header, updateData,cart, updateArrayLikedData} = this.props;
-        if (!target || !target.value) {
-            return null;
-        }
-        else{
             return(
                 <>
                 <div className="productInformation">
@@ -30,7 +26,7 @@ class ProductInformation extends React.Component{
                 </div>
                 </>
             );
-        }
+        
     }
 }
 

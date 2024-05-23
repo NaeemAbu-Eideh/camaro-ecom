@@ -9,3 +9,18 @@ export let camera=[];
 export const cart = [];
 export let target = {};
 export let likeProducts = [];
+export const emptyTarget={
+    key:[],
+    value:{
+        details: "",
+        image: "",
+        liked: false,
+        more_details: "",
+        name: "",
+        price: 0,
+        reviews: "",
+        section: "",
+        target: false,
+        type: ""
+    }
+}

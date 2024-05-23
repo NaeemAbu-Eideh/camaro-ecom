@@ -63,10 +63,6 @@ class ExtraInformation extends React.Component{
     render(){
         const {target} = this.props;
         const {details, moreDetails, reviews,detailsStyle, moreDetailsStyle, reviewsStyle, detailsTitle, moreDetailsTitle, reviewsTitle} = this.state;
-        
-        if (!target || !target.value) {
-            return null;
-        }
 
         return(
             <div className="extraInformation">

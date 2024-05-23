@@ -4,7 +4,7 @@ import Header from "../Components/Header/Index";
 import Menu from "../Components/Menu/Index";
 import Body from "../Components/Index";
 import {fetchCartData, fetchData}from '../Config/DataActtions/GettingData';
-import { smartphone, audio, camera, cart, target, header } from '../Variables/Variables';
+import { smartphone, audio, camera, cart, target, header, emptyTarget } from '../Variables/Variables';
 class Ecom extends React.Component{
     constructor(props){
         super(props);
@@ -22,8 +22,14 @@ class Ecom extends React.Component{
 
     async componentDidMount() {
         try {
+            let target = {};
             const fetchedData = await fetchData(this.state.header, this.updateData);
             const cart = await fetchCartData(this.state.header,this.updateData);
+            const datas = [...fetchedData.smartphone, ...fetchedData.audio, ...fetchedData.camera];
+            let i = 0;
+            while(i < datas.length && datas[i].value.target !== true)i++;
+            i === datas.length? target = emptyTarget: target={key:datas[i].key,value:datas[i].value};
+            console.log(target);
             this.setState({
                 smartphone: fetchedData.smartphone,
                 audio: fetchedData.audio,
