@@ -1,0 +1,53 @@
+.headerLinks{
+    display: inline-block;
+    height: 30px;
+    position: absolute;
+    top: 10px;
+    left: 1550px;
+}
+
+.headerRoutersIcons{
+    color: #201E26;
+    font-size: 40px;
+    padding-right: 20px;
+}
+
+.yourTotalCart{
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    bottom: 80px;
+    left: 1737px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.yourTotalCartValue{
+    position: relative;
+    bottom: 30px;
+    color: #BFC4BF;
+}
+
+.yourTotalCartText{
+    position: relative;
+    bottom: 10px;
+}
+
+.linksCounterNumbers{  
+    position: relative;
+    right: 155px;
+    bottom: 27px;  
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background-color: #B71929;
+    margin-right: 40px;
+    text-align: center;
+    border-radius: 20px;
+
+}
+.numberOfValues{
+    color: white;
+    padding-top: 3px;
+}
+

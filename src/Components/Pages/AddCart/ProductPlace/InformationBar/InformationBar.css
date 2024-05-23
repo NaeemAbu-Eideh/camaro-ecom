@@ -1,0 +1,15 @@
+.productNameSection{
+    display: inline-block;
+    padding-right: 350px;
+    font-size: 18px;
+}
+
+.productInformationsBarPrices{
+    display: inline-block;
+}
+
+.productPrices{
+    display: inline-block;
+    padding-left: 60px;
+    font-size: 18px;
+}

@@ -1,0 +1,83 @@
+.productSummeryDiv{
+    width: 530px;
+    height: 386px;
+    background-color: #F5F5F5;
+    position: absolute;
+    top: 175px;
+    left: 1180px;
+}
+
+.productSummeryTitle{
+    font-size: 20px;
+    font-weight: bold;
+    color: #666666;
+    padding-left: 16px;
+}
+
+.productSummeryElements{
+    position: relative;
+    top: 5px;
+    padding-bottom: 10px;
+    padding-left: 16px;
+}
+
+.PriceTitle{
+    display: inline;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.subtotal{
+    background-color: #358CFF;
+    color: #FFFFFF;
+}
+
+.PriceNumberOfSubtotal{
+    padding-left: 371px;   
+    display: inline;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.PriceNumberOfShipping{
+    padding-left: 230px;
+    display: inline;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.shipping{
+    color: #7F7F7F;
+}
+
+.PriceNumberOfOrderTotal{
+    padding-left: 348px;
+    display: inline;
+    font-weight: bold;
+    font-size: 18px;
+
+}
+
+.orderTotal{
+    color: #7F7F7F;
+}
+
+.checkout{
+    height: 46px;
+    width: 173px;
+    background-color: #A71E28;
+    color: #FBFEFF;
+    font-size: 15px;
+    font-weight: bold;
+    position: relative;
+    left: 162px;
+    top: 58px;
+}
+
+.multipleAddresses{
+    font-size: 20px;
+    color: #535353;
+    text-align: center;
+    position: relative;
+    top: 80px;
+}

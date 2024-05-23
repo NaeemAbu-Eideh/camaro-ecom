@@ -1,0 +1,29 @@
+.productTitleDiv{
+    margin-top: 30px;
+    width: 929px;
+    height: 39px;
+}
+
+.productTitleHr{
+    position: relative;
+    bottom: 10px;
+    border: 1px solid #ECECEC;
+}
+
+.productTitleTexts{
+    position: relative;
+    display: inline-block;
+    left: 451px;
+}
+
+.productTitleText{
+    display: inline; 
+    font-size: 20px;
+    color: #999999;
+    padding-right: 51px;
+}
+
+.productTitleTextsDiv{
+    position: relative;
+    bottom: 10px;
+}

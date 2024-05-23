@@ -1,0 +1,42 @@
+.topFooter{
+    height: 135px;
+}
+
+.topFooterInfoAddress{
+    display: inline-block;
+    position: relative;
+    left: 197px;
+    top: 40px;
+}
+
+.grayTitles{
+    color:#848484;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.whiteParagraphs{
+    color: #F8FFFF;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.topFooterInfoPhoneNumber{
+    display: inline-block;
+    position: relative;
+    left: 300px;
+    top: 40px;
+}
+
+.topFooterIcons{
+    display: inline-block;
+    position: relative;
+    left: 1208px;
+    top: 45px;
+}
+
+.topIcons{
+    font-size: 30px;
+    color: #FFFFFF;
+    margin-right: 36px;
+}

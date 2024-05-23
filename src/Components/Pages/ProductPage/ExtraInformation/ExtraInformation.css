@@ -1,0 +1,51 @@
+.extraInformation{
+    width: 1240px;
+    height: 378px;
+    position: absolute;
+    top: 730px;
+    left: 400px;
+}
+
+.extraInformatinTitel{
+    text-align: center;
+    font-size: 18px;
+}
+
+.extraInformatinTitelsOn{
+    display: inline;
+    position: relative;
+    padding-right: 60px;
+    top: 16px;
+    color: #181818;
+    
+}
+
+.underlineOn{
+    border-bottom: 5px solid black;
+    padding-bottom: 20px;
+}
+
+.extraInformatinTitelsOff{
+    display: inline;
+    position: relative;
+    padding-right: 60px;
+    top: 16px;
+    color: #CACACA;
+}
+
+.extraInformationHr{
+    position: relative;
+    top: 31px;
+    border: 1px solid #CACACA;
+
+}
+.block{
+    display: block;
+}
+
+.extraInformationText{
+    padding-top: 40px;
+    font-size: 18px;
+    font-weight: bolder;
+}
+

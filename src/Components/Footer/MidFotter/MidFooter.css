@@ -1,0 +1,22 @@
+.midFooterInfo{
+    display: inline-table;
+    position: relative;
+    top: 60px;
+    left: 195px;
+    margin-right: 300px;
+}
+
+.midFooterInfoTitle{
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+.ourStoreInfo{
+    color: #848484;
+    font-size: 16px;
+}
+
+.midFooterInfos{
+    color: #848484;
+    font-size: 16px;
+}

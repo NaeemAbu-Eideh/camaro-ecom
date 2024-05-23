@@ -1,0 +1,40 @@
+.bottomFooterBar{
+    width: 2052px;
+    height: 55px;
+    background-color: #1F1F1F;
+    position: absolute;
+    bottom: 2px;
+}
+
+.zooTemplate{
+    display: inline-block;
+    padding-top: 4px;
+    margin-left: 200px;
+    color: #787878;
+    font-size: 15px;
+}
+
+.copyRightIcon{
+    font-size: 12px;
+    position: relative;
+    top: 1px;
+}
+
+.template{
+    color: #CACACA;
+    font-size: 17px;
+}
+
+.bottmFooterIcons{
+    position: absolute;
+    bottom: 15px;
+    left: 1600px;
+    top: 8px;
+}
+
+.bottomFooterIconsStyle{
+    color: #929292;
+    font-size: 40px;
+
+    padding-right: 16px;
+}

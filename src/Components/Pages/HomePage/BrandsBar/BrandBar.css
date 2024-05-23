@@ -1,0 +1,27 @@
+.brandsStage{
+    height: 253px;
+}
+
+.brandsSection{
+    width: 1510px;
+    height: 75px;
+    position: relative;
+    left: 248px;
+    top: 60px;
+}
+
+.allBrands{
+    margin-right: 180px;
+    position: relative;
+    left: 100px;
+}
+
+.brandsgroup1{
+    position: relative;
+    bottom: 10px;
+}
+
+.brandsgroup2{
+    position: relative;
+    bottom: 15px;
+}

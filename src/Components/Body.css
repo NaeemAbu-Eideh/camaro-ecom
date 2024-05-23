@@ -1,0 +1,10 @@
+.pageBody{
+    position: absolute;
+    top: 126px;
+    left: 0;
+    width: 100%;
+}
+
+.pageBodySections{
+    width: 100%;
+}

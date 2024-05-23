@@ -1,0 +1,72 @@
+.increaseDecreaseIcons{
+    position: relative;
+    right: 460px;
+    padding-left: 43px;
+    top: 5px;
+    color: #C0C0C0;
+    font-size: 20px;
+}
+
+
+.numberOfProducts{
+    text-align: center;
+    font-size: 18px;
+    width: 748px;
+    height: 61px;
+    border: 1px solid #C0C0C0;
+}
+
+.like{
+    height: 61px;
+    width: 56px;
+    position: relative;
+    right: 115px;
+    top: 2px;
+    background-color: #FFFFFF;
+    border: 1px solid #C0C0C0;
+}
+
+.reset{
+    height: 61px;
+    width: 56px;
+    position: relative;
+    right: 115px;
+    top: 2px;
+    background-color: #FFFFFF;
+    border: 1px solid #C0C0C0;
+    right: 100px;
+}
+
+.likeAndResetIcons{
+    font-size: 20px;
+    
+}
+
+
+
+.addCart{
+    background-color: #000000;
+    width: 893px;
+    height: 55px;
+    text-align: center;
+    color: #C9C9C9;
+    font-size: 20px;
+    margin-top: 25px;
+}
+
+.addCart:hover{
+    background-color: #343536;
+}
+
+.buyInformation{
+    margin-top: 26px;
+}
+
+.buyInfoText{
+    font-size: 20px;
+    color: #7D7D7D;
+}
+
+.cart{
+    width: 1000px;
+}

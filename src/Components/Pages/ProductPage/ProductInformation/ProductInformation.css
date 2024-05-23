@@ -1,0 +1,27 @@
+.productInformation{
+    width: 504px;
+    height: 304px;
+    position: absolute;
+    left: 900px;
+    top: 57px;
+}
+
+.productBath{
+    font-size: 17px;
+    font-weight: bold;
+    color: #C0C0C0;
+    position: relative;
+    top: 10px;
+}
+
+.productPrice{
+    color: #B4263D;
+}
+
+.productMoreInformation{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 17px;
+    
+}
+
+

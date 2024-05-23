@@ -1,0 +1,96 @@
+.productInformationPlaceDiv{
+    width: 929px;
+    height: 347px;
+    position: absolute;
+    left: 193px;
+    top: 220px;
+}
+
+
+
+.productAtCart{
+    width: 929px;
+    height: 154px;
+}
+
+.productAtCartImage{
+    width: 94px;
+    height: 70px;
+    top: 47px;
+    left: 10px;
+    
+}
+
+.productAtCartHr{
+    border: 1px solid #ECECEC;
+}
+
+.productAtCartImageDiv{
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.productAtCartInformation{
+    position: relative;
+    left: 94px;
+    top: 23px;
+    display: inline-block;   
+}
+
+.productAtCartInformationNameOfPruduct{
+    color: #989898;
+    
+}
+
+.productAtCartInformationPriceOfPruduct{
+    font-weight: bold;
+    font-size: 18px;
+    position: relative;
+    bottom: 10px;
+
+}
+
+.productAtCartInformationClear{
+    font-size: 30px;
+    position: relative;
+    bottom: 23px;
+}
+
+.productAtCartPrice{
+    display: inline-block;
+    position: relative;
+    left: 320px;
+    bottom: 36px;
+}
+
+.productAtCartPriceProductPrice{
+    display: inline;
+    margin-right: 28px;
+    font-weight: bold;
+    font-size: 21px;
+}
+
+.productAtCartPriceProductQuantity{
+    display: inline;
+    width: 84px;
+    height: 46px;
+    border: 1px solid #EBEBEB;
+    margin-right: 28px;
+    text-align: center;
+
+}
+
+.productAtCartPricePlusMinus{
+    position: relative;
+    padding-right: 30px;
+    right: 195px;
+    top: 1px;
+    font-size: 10px;
+}
+
+.productAtCartPriceClear{
+    position: relative;
+    right: 97px;
+    top: 7px;
+    font-size: 25px;
+}

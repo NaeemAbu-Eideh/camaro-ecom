@@ -1,0 +1,11 @@
+.footer{
+    height: 660px;
+    background-color: #252525;
+}
+
+.footerHr{
+    border: 1px solid #848484;
+    width: 1660px;
+    position: relative;
+    top: 10px;
+}

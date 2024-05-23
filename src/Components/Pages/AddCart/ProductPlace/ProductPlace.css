@@ -1,0 +1,22 @@
+.productInformationsPlace{
+    width: 840px;
+    margin-left: 200px;
+    display: inline-block;
+    padding-right: 30px;
+}
+
+.productPlaceHr{
+    border: 1px solid #E0E0E0;
+}
+
+.cartProductDiv{
+    display: table-column;
+}
+
+ .summery{
+    width: 750px;
+    height: 447px;
+    background-color: aquamarine;
+    display: inline-table;
+    
+}

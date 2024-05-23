@@ -1,0 +1,113 @@
+.phoneSectionStage{
+    width: 100%;
+    height: 600px;
+    background-color: #F0F0F0;
+    
+}
+
+.phoneSection{
+    width: 1408px;
+    height: 496px;
+    background-color: #FFFFFF;
+    position: absolute;
+    top: 44px;
+    left: 239px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.smartphoneAndTablets{
+    font-size: 26px;
+    padding-top: 36px;
+    padding-left: 27px;
+    font-weight: 900;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.phoneSectionHrRed{
+    margin-left: 27px;
+    border: 3px solid #AB1027;
+    width: 120px;
+    
+}
+
+.phoneSectionHrGray{
+    position: relative;
+    bottom: 10px;
+    width: 1232px;
+    margin-left: 152px;
+    border: 1px solid #EFEFEF;
+}
+
+.phoneSectionHr{
+    position: relative;
+    bottom: 13px;
+}
+
+.phoneProductSection{
+    width: 218px;
+    height: 264px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 30px;
+    display: inline-block;
+}
+
+.phoneImage{
+    width: 184px;
+    height: 133px;
+    margin-left: 16px;
+    padding-bottom: 42px;
+    padding-right: 18px;
+    border-right: 3px solid #EFEFEF;
+}
+
+.phoneInfoDiv{
+    text-align: center;
+    width: 180px;
+    margin-left: 19px;
+    color: #212121;
+    font-size: 18px;
+    word-wrap: break-word;
+    font-weight: bold;
+    position: relative;
+    bottom: 10px;
+}
+
+.phonePriceStyle{
+    color: #A81522;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.lastPhone{
+    width: 184px;
+    height: 133px;
+    margin-left: 16px;
+    padding-bottom: 42px;
+    padding-right: 18px;
+}
+
+.phoneSectionParts{
+    text-align: center;
+    height: 30px;
+    margin-top: 10px;
+}
+
+.phoneSectionPartOn{
+    display: inline-block;
+    width: 41px;
+    height: 8px;
+    margin-right: 10px;
+    background-color: #939393;
+}
+
+.phoneSectionPartsOff{
+    display: inline-block;
+    width: 41px;
+    height: 3px;
+    margin-right: 10px;
+    background-color: #939393;
+}
+
+
