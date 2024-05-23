@@ -29,12 +29,12 @@ class Ecom extends React.Component{
             let i = 0;
             while(i < datas.length && datas[i].value.target !== true)i++;
             i === datas.length? target = emptyTarget: target={key:datas[i].key,value:datas[i].value};
-            console.log(target);
             this.setState({
                 smartphone: fetchedData.smartphone,
                 audio: fetchedData.audio,
                 camera: fetchedData.camera,
-                cart: cart
+                cart: cart,
+                target:target
             });
         
         } catch (error) {
