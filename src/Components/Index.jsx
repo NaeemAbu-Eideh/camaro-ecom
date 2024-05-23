@@ -23,7 +23,7 @@ class Body extends React.Component {
                                 updateData={updateData}
                             />
                         } />
-                        <Route path={`/product`} element={ // Use optional chaining
+                        <Route path={`/product/${target?.key?.[0]}`} element={ // Use optional chaining
                             <ProductPage
                                 cart={cart}
                                 updateData={updateData}

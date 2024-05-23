@@ -25,7 +25,7 @@ class CameraSection extends React.Component{
                         </div>
                         <div className="camera">
                         {camera.map((cameras,index) => (
-                            <Router.Link to={`/product`} key={index}>
+                            <Router.Link to={`/product/${cameras.key[0]}`} key={index}>
                                 <AddProduct
                                 productSection="cameraProductSection"
                                 spanClassName=""

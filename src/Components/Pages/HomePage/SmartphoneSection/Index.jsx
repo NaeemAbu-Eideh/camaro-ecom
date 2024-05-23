@@ -24,7 +24,7 @@ class SmartphoneSection extends React.Component {
                     </div>
                     <div className="phones">
                         {smartphone.map((phone, index) => (
-                            <Link to={`/product`} key={index}>
+                            <Link to={`/product/${phone.key[0]}`} key={index}>
                                 <AddProduct
                                     productSection="phoneProductSection"
                                     spanClassName=""

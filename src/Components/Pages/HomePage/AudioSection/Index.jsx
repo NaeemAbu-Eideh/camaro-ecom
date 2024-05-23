@@ -26,7 +26,7 @@ class AudioSection extends React.Component{
                 </div>
                 <div className="audio">
                     {audio.map((audioItem, index) => (
-                        <Router.Link to={`/product`}  key={index}>
+                        <Router.Link to={`/product/${audioItem.key[0]}`}  key={index}>
                             <AddProduct
                             productSection="audioProductSection"
                             spanClassName=""
