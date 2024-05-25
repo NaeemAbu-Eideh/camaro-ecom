@@ -4,7 +4,8 @@ import Header from "../Components/Header/Index";
 import Menu from "../Components/Menu/Index";
 import Body from "../Components/Index";
 import {fetchCartData, fetchData}from '../Config/DataActtions/GettingData';
-import { smartphone, audio, camera, cart, target, header, emptyTarget } from '../Variables/Variables';
+import { smartphone, audio, camera, cart, target, header, emptyTarget, allProducts } from '../Variables/Variables';
+
 class Ecom extends React.Component{
     constructor(props){
         super(props);
@@ -14,7 +15,8 @@ class Ecom extends React.Component{
             audio:audio,
             cart:cart,
             target:target,
-            header:header
+            header:header,
+            allProducts:allProducts
         }
         this.updateData=this.updateData.bind(this);
         this.updateArrayLikedData = this.updateArrayLikedData.bind(this);
@@ -23,18 +25,20 @@ class Ecom extends React.Component{
     async componentDidMount() {
         try {
             let target = {};
+            let allProductsData = [];
             const fetchedData = await fetchData(this.state.header, this.updateData);
             const cart = await fetchCartData(this.state.header,this.updateData);
-            const datas = [...fetchedData.smartphone, ...fetchedData.audio, ...fetchedData.camera];
+            allProductsData = [...fetchedData.smartphone, ...fetchedData.audio, ...fetchedData.camera];
             let i = 0;
-            while(i < datas.length && datas[i].value.target !== true)i++;
-            i === datas.length? target = emptyTarget: target={key:datas[i].key,value:datas[i].value};
+            while(i < allProductsData.length && allProductsData[i].value.target !== true)i++;
+            i === allProductsData.length? target = emptyTarget: target={key:allProductsData[i].key,value:allProductsData[i].value};
             this.setState({
                 smartphone: fetchedData.smartphone,
                 audio: fetchedData.audio,
                 camera: fetchedData.camera,
                 cart: cart,
-                target:target
+                target:target,
+                allProducts:allProductsData
             });
         
         } catch (error) {
@@ -61,7 +65,7 @@ class Ecom extends React.Component{
     }
 
     render(){
-        const {smartphone,camera,audio,cart,target, header} = this.state;
+        const {smartphone,camera,audio,cart,target, header, allProducts} = this.state;
         return(
         <>
         <Router.BrowserRouter>
@@ -76,6 +80,7 @@ class Ecom extends React.Component{
             cart={cart}
             target={target}
             header={header}
+            allProducts={allProducts}
             />
         </Router.BrowserRouter>
         </>

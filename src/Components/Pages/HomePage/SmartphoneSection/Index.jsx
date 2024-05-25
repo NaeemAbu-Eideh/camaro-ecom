@@ -3,13 +3,15 @@ import './SmartphoneSection.css';
 import AddProduct from "../../../CommonComponents";
 import { Link, Outlet } from "react-router-dom";
 
-
-
 class SmartphoneSection extends React.Component {
 
-    handleProductClick = (phone) => {
-        let newData = {target: phone}
-        this.props.updateData(newData);  
+    handleProductClick = async(phone) => {
+        const {allProducts, updateData} = this.props;
+        let i =0;
+        while(i < allProducts.length && allProducts[i].key[0] !== phone.key[0])i++;
+        allProducts[i].value.target = true;
+        let newData = {target: phone, allProducts: allProducts};
+        updateData(newData);
     }
 
     render() {

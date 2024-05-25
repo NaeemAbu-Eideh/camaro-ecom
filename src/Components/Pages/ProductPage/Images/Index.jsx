@@ -7,9 +7,6 @@ class Images extends React.Component {
             return (
                 <img className="imagesBar" src={target.value.image} alt={target.value.name} />           
             );
-        
-
-        
     }
 }
 

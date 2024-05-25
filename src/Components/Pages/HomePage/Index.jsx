@@ -8,23 +8,28 @@ import SaveMoneyBar from './SaveMoneyBar/Index.jsx';
 
 class HomePage extends React.Component {
 
-
     render() {
-        const { smartphone, audio, camera, target, updateData } = this.props;
+        const { smartphone, audio, camera, target, updateData, allProducts } = this.props;
         return (
             <>
                 <SmartphoneSection
                     updateData={updateData}
                     smartphone={smartphone}
+                    allProducts={allProducts}
+                    target={target}
                 />
                 <AudioSection
                     audio={audio}
                     updateData={updateData}
+                    allProducts={allProducts}
+                    target={target}
                 />
                 <SaveMoneyBar />
                 <CameraSection
                     camera={camera}
                     updateData={updateData}
+                    allProducts={allProducts}
+                    target={target}
                 />
                 <BrandsBar />
             </>

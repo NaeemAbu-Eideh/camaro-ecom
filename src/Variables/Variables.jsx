@@ -24,3 +24,5 @@ export const emptyTarget={
         type: ""
     }
 }
+
+export let allProducts = [];

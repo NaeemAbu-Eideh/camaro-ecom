@@ -6,6 +6,7 @@ import ProductInformation from './ProductInformation/Index.jsx';
 import ExtraInformation from './ExtraInformation/index.jsx';
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import { emptyTarget } from '../../../Variables/Variables.jsx';
+import { updateValue } from '../../../Config/DataActtions/UpdateData.jsx';
 
 class ProductPage extends React.Component {
     constructor(props) {
@@ -21,32 +22,37 @@ class ProductPage extends React.Component {
         };
     }
 
+    componentDidMount = async()=>{
+        const {allProducts, target} = this.props;
+        await updateValue(`project/${target.key[0]}`, {target: true});
+    }
+
     isEmpty = (obj) => {
         return Object.keys(obj).length === 0;
     }
 
     handleForwardData = () => {
-        const newIndex = (this.state.index + 1) % this.state.datas.length;
-        this.setState(
-            { index: newIndex, target: this.state.datas[newIndex] },
-            () => {
-                this.props.updateData({ target: this.state.target });
-            }
-        );
+        // const newIndex = (this.state.index + 1) % this.state.datas.length;
+        // this.setState(
+        //     { index: newIndex, target: this.state.datas[newIndex] },
+        //     () => {
+        //         this.props.updateData({ target: this.state.target });
+        //     }
+        // );
     }
 
     handleBackwardData = () => {
-        const newIndex = (this.state.index - 1 + this.state.datas.length) % this.state.datas.length;
-        this.setState(
-            { index: newIndex, target: this.state.datas[newIndex] },
-            () => {
-                this.props.updateData({ target: this.state.target });
-            }
-        );
+        // const newIndex = (this.state.index - 1 + this.state.datas.length) % this.state.datas.length;
+        // this.setState(
+        //     { index: newIndex, target: this.state.datas[newIndex] },
+        //     () => {
+        //         this.props.updateData({ target: this.state.target });
+        //     }
+        // );
     }
 
     render() {
-        const { cart, header, updateArrayLikedData } = this.props;
+        const { cart, header, updateArrayLikedData, allProducts } = this.props;
         const { target } = this.state;
 
         return (

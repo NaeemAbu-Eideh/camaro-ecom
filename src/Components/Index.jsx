@@ -9,7 +9,7 @@ import { Routes, Route } from 'react-router-dom';
 
 class Body extends React.Component {
     render() {
-        const { smartphone, audio, cart, camera, target, updateData, header, updateArrayLikedData } = this.props;
+        const { smartphone, audio, cart, camera, target, updateData, header, updateArrayLikedData, allProducts } = this.props;
         return (
             <div className='pageBody'>
                 <div className='pageBodySections'>
@@ -21,6 +21,7 @@ class Body extends React.Component {
                                 camera={camera}
                                 target={target}
                                 updateData={updateData}
+                                allProducts={allProducts}
                             />
                         } />
                         <Route path={`/product/${target?.key?.[0]}`} element={ // Use optional chaining
@@ -33,6 +34,7 @@ class Body extends React.Component {
                                 header={header}
                                 updateArrayLikedData={updateArrayLikedData}
                                 target={target}
+                                allProducts={allProducts}
                             />
                         } />
                         <Route path='/cart' element={
