@@ -5,7 +5,7 @@ import MainImage from './MainImage/Index.jsx';
 import ProductInformation from './ProductInformation/Index.jsx';
 import ExtraInformation from './ExtraInformation/index.jsx';
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
-import { emptyTarget } from '../../../Variables/Variables.jsx';
+import { allProducts, emptyTarget } from '../../../Variables/Variables.jsx';
 import { updateValue } from '../../../Config/DataActtions/UpdateData.jsx';
 
 class ProductPage extends React.Component {
@@ -23,7 +23,7 @@ class ProductPage extends React.Component {
     }
 
     componentDidMount = async()=>{
-        const {allProducts, target} = this.props;
+        const {target} = this.props;
         await updateValue(`project/${target?.key?.[0]}`, {target: true});
     }
 
@@ -31,24 +31,13 @@ class ProductPage extends React.Component {
         return Object.keys(obj).length === 0;
     }
 
-    handleForwardData = () => {
-        // const newIndex = (this.state.index + 1) % this.state.datas.length;
-        // this.setState(
-        //     { index: newIndex, target: this.state.datas[newIndex] },
-        //     () => {
-        //         this.props.updateData({ target: this.state.target });
-        //     }
-        // );
+    handleForwardData = async() => {
+        
+
     }
 
     handleBackwardData = () => {
-        // const newIndex = (this.state.index - 1 + this.state.datas.length) % this.state.datas.length;
-        // this.setState(
-        //     { index: newIndex, target: this.state.datas[newIndex] },
-        //     () => {
-        //         this.props.updateData({ target: this.state.target });
-        //     }
-        // );
+        console.log('ford');
     }
 
     render() {
