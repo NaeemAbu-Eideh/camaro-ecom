@@ -6,14 +6,8 @@ import { Link, Outlet } from "react-router-dom";
 class SmartphoneSection extends React.Component {
 
     handleProductClick = async (phone) => {
-        const { allProducts, updateData } = this.props;
-        let i = 0;
-        while (i < allProducts.length && allProducts[i].key[0] !== phone.key[0]) i++;
-        if (i < allProducts.length) {
-            allProducts[i].value.target = true;
-        }
-        let newData = { target: phone, allProducts: allProducts };
-        updateData(newData);
+        let newData = { target: phone};
+        this.props.updateData(newData);
     }
 
     render() {

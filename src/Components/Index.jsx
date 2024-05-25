@@ -9,7 +9,7 @@ import { Routes, Route } from 'react-router-dom';
 
 class Body extends React.Component {
     render() {
-        const { smartphone, audio, cart, camera, target, updateData, header, updateArrayLikedData, allProducts } = this.props;
+        const { smartphone, audio, cart, camera, target, updateData, header, updateArrayLikedData} = this.props;
         const productKey = target?.key?.[0];
         return (
             <div className='pageBody'>
@@ -18,13 +18,13 @@ class Body extends React.Component {
                         <Route 
                             path='/' 
                             element={
+                                
                                 <HomePage
                                     smartphone={smartphone}
                                     audio={audio}
                                     camera={camera}
                                     target={target}
                                     updateData={updateData}
-                                    allProducts={allProducts}
                                 />
                             } 
                         />
@@ -40,7 +40,6 @@ class Body extends React.Component {
                                     header={header}
                                     updateArrayLikedData={updateArrayLikedData}
                                     target={target}
-                                    allProducts={allProducts}
                                 />
                             } 
                         />
