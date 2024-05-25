@@ -24,7 +24,7 @@ class ProductPage extends React.Component {
 
     componentDidMount = async()=>{
         const {allProducts, target} = this.props;
-        await updateValue(`project/${target.key[0]}`, {target: true});
+        await updateValue(`project/${target?.key?.[0]}`, {target: true});
     }
 
     isEmpty = (obj) => {
