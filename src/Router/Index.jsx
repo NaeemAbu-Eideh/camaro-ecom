@@ -4,7 +4,7 @@ import Header from "../Components/Header/Index";
 import Menu from "../Components/Menu/Index";
 import Body from "../Components/Index";
 import {fetchCartData, fetchData}from '../Config/DataActtions/GettingData';
-import { smartphone, audio, camera, cart, target, header, emptyTarget} from '../Variables/Variables';
+import { smartphone, audio, camera, cart, target, header, allProducts, oldTarget} from '../Variables/Variables';
 
 class Ecom extends React.Component{
     constructor(props){
@@ -16,6 +16,8 @@ class Ecom extends React.Component{
             cart:cart,
             target:target,
             header:header,
+            allProducts: allProducts,
+            oldTarget:oldTarget
         }
         this.updateData=this.updateData.bind(this);
         this.updateArrayLikedData = this.updateArrayLikedData.bind(this);
@@ -25,11 +27,20 @@ class Ecom extends React.Component{
         try {
             const fetchedData = await fetchData(this.state.header, this.updateData);
             const cart = await fetchCartData(this.state.header,this.updateData);
+            const allProductDatas = [...fetchedData.smartphone, ...fetchedData.audio, ...fetchedData.camera];
+            let targetData = {};
+            for(let i in allProductDatas){
+                if(allProductDatas[i].value.target === true){
+                    targetData = allProductDatas[i];
+                }
+            }
             this.setState({
                 smartphone: fetchedData.smartphone,
                 audio: fetchedData.audio,
                 camera: fetchedData.camera,
-                cart: cart
+                cart: cart,
+                allProducts: allProductDatas,
+                target: targetData
             });
         
         } catch (error) {
@@ -57,7 +68,7 @@ class Ecom extends React.Component{
     }
 
     render(){
-        const {smartphone,camera,audio,cart,target, header} = this.state;
+        const {smartphone,camera,audio,cart,target, header, allProducts,oldTarget} = this.state;
         return(
         <>
         <Router.BrowserRouter>
@@ -72,6 +83,8 @@ class Ecom extends React.Component{
             cart={cart}
             target={target}
             header={header}
+            allProducts={allProducts}
+            oldTarget={oldTarget}
             />
         </Router.BrowserRouter>
         </>

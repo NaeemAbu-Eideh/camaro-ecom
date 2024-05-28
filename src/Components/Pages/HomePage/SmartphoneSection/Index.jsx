@@ -2,16 +2,34 @@ import React from "react";
 import './SmartphoneSection.css';
 import AddProduct from "../../../CommonComponents";
 import { Link, Outlet } from "react-router-dom";
+import { oldTarget } from "../../../../Variables/Variables";
 
 class SmartphoneSection extends React.Component {
 
     handleProductClick = async (phone) => {
-        let newData = { target: phone};
+        let oldTarget = {
+            key:['zero']
+        };
+        const {allProducts} = this.props;
+        for(let i in allProducts){
+            if(allProducts[i].key[0] === phone.key[0]){
+                if(phone.value.target === false){
+                    allProducts[i].value.target = true;
+                }
+            }
+            else{
+                if(allProducts[i].value.target === true){
+                    allProducts[i].value.target = false;
+                    oldTarget = allProducts[i];
+                }
+            }
+        }
+        let newData = { target: phone, allProducts: allProducts, oldTarget:oldTarget};
         this.props.updateData(newData);
     }
 
     render() {
-        const { smartphone } = this.props;
+        const { smartphone,allProducts} = this.props;
         return (
             <div className="phoneSectionStage">
                 <div className="phoneSection">
@@ -22,7 +40,7 @@ class SmartphoneSection extends React.Component {
                     </div>
                     <div className="phones">
                         {smartphone.map((phone, index) => {
-                            const phoneKey = phone.key[0] || "target";
+                            const phoneKey = phone?.key?.[0];
                             return (
                                 <Link to={`/product/${phoneKey}`} key={index}>
                                     <AddProduct
@@ -37,6 +55,7 @@ class SmartphoneSection extends React.Component {
                                         priceSpan="phonePriceStyle"
                                         display=""
                                         onClick={() => this.handleProductClick(phone)}
+                                        oldTarget={oldTarget}
                                     />
                                 </Link>
                             );
