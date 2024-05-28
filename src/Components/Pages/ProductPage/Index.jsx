@@ -6,7 +6,6 @@ import ProductInformation from './ProductInformation/Index.jsx';
 import ExtraInformation from './ExtraInformation/index.jsx';
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import {emptyTarget } from '../../../Variables/Variables.jsx';
-import { updateValue } from '../../../Config/DataActtions/UpdateData.jsx';
 
 class ProductPage extends React.Component {
     constructor(props) {
@@ -17,19 +16,11 @@ class ProductPage extends React.Component {
 
         this.state = {
             index: index,
-            target: target,
+            target: this.isEmpty(target) ? emptyTarget : target,
             datas: datas
         };
     }
 
-
-    componentDidMount= async()=>{
-        const {oldTarget, target} = this.props;
-        if(oldTarget?.key?.[0] !== 'zero' ){
-            await updateValue(`project/${oldTarget?.key?.[0]}`, {target: false});
-        }
-        await updateValue(`project/${target?.key?.[0]}`, {target: true});
-    }
     
 
     isEmpty = (obj) => {
@@ -46,7 +37,7 @@ class ProductPage extends React.Component {
     }
 
     render() {
-        const { cart, header, updateArrayLikedData, allProducts, oldTarget} = this.props;
+        const { cart, header, updateArrayLikedData} = this.props;
         const { target } = this.state;
 
         return (

@@ -6,11 +6,10 @@ import AddCart from './Pages/AddCart/Index';
 import SubscribeBar from './SubscribeBar/Index';
 import Footer from './Footer/Index';
 import { Routes, Route } from 'react-router-dom';
-import { emptyTarget } from '../Variables/Variables';
 
 class Body extends React.Component {
     render() {
-        const { smartphone, audio, cart, camera, target, updateData, header, updateArrayLikedData, allProducts, oldTarget} = this.props;
+        const { smartphone, audio, cart, camera, target, updateData, header, updateArrayLikedData} = this.props;
         const productKey = target?.key?.[0];
         return (
             <div className='pageBody'>
@@ -26,8 +25,6 @@ class Body extends React.Component {
                                     camera={camera}
                                     target={target}
                                     updateData={updateData}
-                                    allProducts={allProducts}
-                                    oldTarget={oldTarget}
                                 />
                             } 
                         />
@@ -43,23 +40,6 @@ class Body extends React.Component {
                                     header={header}
                                     updateArrayLikedData={updateArrayLikedData}
                                     target={target}
-                                    allProducts={allProducts}
-                                    oldTarget={oldTarget}
-                                />
-                            } 
-                        />
-                        <Route 
-                            path={'*'} 
-                            element={
-                                <ProductPage
-                                    cart={cart}
-                                    updateData={updateData}
-                                    smartphone={smartphone}
-                                    audio={audio}
-                                    camera={camera}
-                                    header={header}
-                                    updateArrayLikedData={updateArrayLikedData}
-                                    target={emptyTarget}
                                 />
                             } 
                         />

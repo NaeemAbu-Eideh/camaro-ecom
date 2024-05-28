@@ -10,25 +10,8 @@ import * as Router from 'react-router-dom';
 class AudioSection extends React.Component{
 
     handleProductClick = (audio) => {
-        let oldTarget = {
-            key:['zero']
-        };
-        const {allProducts} = this.props;
-        for(let i in allProducts){
-            if(allProducts[i].key[0] === audio.key[0]){
-                if(audio.value.target === false){
-                    allProducts[i].value.target = true;
-                }
-            }
-            else{
-                if(allProducts[i].value.target === true){
-                    allProducts[i].value.target = false;
-                    oldTarget = allProducts[i];
-                }
-            }
-        }
-        let newData = { target: audio, allProducts: allProducts, oldTarget:oldTarget};
-        this.props.updateData(newData); 
+        let newData = {target: audio}
+        this.props.updateData(newData);  
     }
 
     render(){

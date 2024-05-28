@@ -26,6 +26,3 @@ export const emptyTarget={
 }
 
 export let allProducts = [];
-export let oldTarget = {
-    key:['zero']
-};
