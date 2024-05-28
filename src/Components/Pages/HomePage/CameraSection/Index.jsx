@@ -9,7 +9,24 @@ class CameraSection extends React.Component{
 
 
     handleProductClick = (camera) => {
-        let newData = {target: camera}
+        let oldTarget = {
+            key:['zero']
+        };
+        const {allProducts} = this.props;
+        for(let i in allProducts){
+            if(allProducts[i].key[0] === camera.key[0]){
+                if(camera.value.target === false){
+                    allProducts[i].value.target = true;
+                }
+            }
+            else{
+                if(allProducts[i].value.target === true){
+                    allProducts[i].value.target = false;
+                    oldTarget = allProducts[i];
+                }
+            }
+        }
+        let newData = { target: camera, allProducts: allProducts, oldTarget:oldTarget};
         this.props.updateData(newData);  
     }
 
