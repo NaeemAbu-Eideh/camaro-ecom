@@ -7,12 +7,24 @@ import SubscribeBar from './SubscribeBar/Index';
 import Footer from './Footer/Index';
 import { Routes, Route } from 'react-router-dom';
 
+
+class Dialog extends React.Component{
+    render(){
+        return(
+            <div className='dialog'>
+                
+            </div>
+        );
+    }
+}
+
 class Body extends React.Component {
     render() {
         const { smartphone, audio, cart, camera, target, updateData, header, updateArrayLikedData} = this.props;
         const productKey = target?.key?.[0];
         return (
             <div className='pageBody'>
+                <Dialog/>
                 <div className='pageBodySections'>
                     <Routes>
                         <Route 
