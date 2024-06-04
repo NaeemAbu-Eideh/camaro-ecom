@@ -67,7 +67,7 @@ class Body extends React.Component {
                 <div className='pageBodySections'>
                     <Footer />
                 </div>
-                <Dialog dialogDisplay={dialogDisplay} updateData={updateData} v={dialogDeleteInformation}/>
+                <Dialog dialogDisplay={dialogDisplay} updateData={updateData} dialogDeleteInformation={dialogDeleteInformation}/>
             </div>
         );
     }

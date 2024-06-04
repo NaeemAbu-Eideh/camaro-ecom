@@ -105,7 +105,7 @@ class Product extends React.Component {
     }
     
     handleRemove = async() =>{
-        const { header, cart, updateData, product} = this.props;
+        const { header, cart, updateData, product, dialogDeleteInformation} = this.props;
         let newHeader = {
             like: header.like,
             addCart: header.addCart- product.value.number_of_products,
@@ -113,6 +113,7 @@ class Product extends React.Component {
         };
         const newCart = this.removeFromCart(cart, product.key);
         updateData({dialogDisplay:'block', dialogDeleteInformation:{header:newHeader, cart: newCart, key:product.key[0]}});
+        
     }
 
     removeFromCart(array, key) {

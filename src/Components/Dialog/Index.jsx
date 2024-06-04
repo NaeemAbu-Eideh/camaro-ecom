@@ -1,15 +1,19 @@
 import React from 'react';
 import './Dialog.css';
+import { deleteCartProduct } from '../../Config/DataActtions/DeleteData';
+
 
 
 class Dialog extends React.Component{
     handelCancelClick = ()=>{
-        const{dialogDisplay, updateData} = this.props;
+        const{updateData} = this.props;
         updateData({dialogDisplay:'none'});
     }
 
     handelYesClick= async()=>{
-        const{dialogDisplay, dialogDeleteInformation} = this.props;
+        const{dialogDeleteInformation, updateData} = this.props;
+        await deleteCartProduct(`cart/${dialogDeleteInformation.key}`);
+        await updateData({header:dialogDeleteInformation.header, cart: dialogDeleteInformation.cart, dialogDisplay:'none'});
 
     }
     render(){
