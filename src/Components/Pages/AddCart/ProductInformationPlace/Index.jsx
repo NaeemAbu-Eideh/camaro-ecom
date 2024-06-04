@@ -4,7 +4,7 @@ import Product from "./Product/Index";
 
 class ProductInformationPlace extends React.Component {
     render() {
-        const { cart, header, updateData } = this.props;
+        const { cart, header, updateData , dialogDeleteInformation, dialogDisplay} = this.props;
         if (!cart || cart.length === 0) {
             return <div className="productInformationPlaceDiv">No products in cart</div>;
         }
@@ -19,6 +19,8 @@ class ProductInformationPlace extends React.Component {
                         product={product}
                         header={header}
                         updateData={updateData}
+                        dialogDeleteInformation={dialogDeleteInformation}
+                        dialogDisplay={dialogDisplay}
                     />
                 ))}
             </div>

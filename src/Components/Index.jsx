@@ -6,25 +6,17 @@ import AddCart from './Pages/AddCart/Index';
 import SubscribeBar from './SubscribeBar/Index';
 import Footer from './Footer/Index';
 import { Routes, Route } from 'react-router-dom';
+// import Dialog from './Dialog/Index.jsx';
 
 
-class Dialog extends React.Component{
-    render(){
-        return(
-            <div className='dialog'>
-                
-            </div>
-        );
-    }
-}
 
 class Body extends React.Component {
     render() {
-        const { smartphone, audio, cart, camera, target, updateData, header, updateArrayLikedData} = this.props;
+        const { smartphone, audio, cart, camera, target, updateData, header, updateArrayLikedData, dialogDisplay, dialogDeleteInformation} = this.props;
         const productKey = target?.key?.[0];
         return (
             <div className='pageBody'>
-                <Dialog/>
+                
                 <div className='pageBodySections'>
                     <Routes>
                         <Route 
@@ -62,6 +54,8 @@ class Body extends React.Component {
                                     cart={cart}
                                     header={header}
                                     updateData={updateData}
+                                    dialogDisplay={dialogDisplay}
+                                    dialogDeleteInformation={dialogDeleteInformation}
                                 />
                             } 
                         />
@@ -73,6 +67,7 @@ class Body extends React.Component {
                 <div className='pageBodySections'>
                     <Footer />
                 </div>
+                {/* <Dialog dialogDisplay={dialogDisplay} updateData={updateData} v={dialogDeleteInformation}/> */}
             </div>
         );
     }

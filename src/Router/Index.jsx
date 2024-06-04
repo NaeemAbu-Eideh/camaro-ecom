@@ -16,6 +16,8 @@ class Ecom extends React.Component{
             cart:cart,
             target:target,
             header:header,
+            dialogDisplay:'none',
+            dialogDeleteInformation:{}
         }
         this.updateData=this.updateData.bind(this);
         this.updateArrayLikedData = this.updateArrayLikedData.bind(this);
@@ -57,7 +59,7 @@ class Ecom extends React.Component{
     }
 
     render(){
-        const {smartphone,camera,audio,cart,target, header} = this.state;
+        const {smartphone,camera,audio,cart,target, header, dialogDeleteInformation, dialogDisplay} = this.state;
         return(
         <>
         <Router.BrowserRouter>
@@ -72,6 +74,8 @@ class Ecom extends React.Component{
             cart={cart}
             target={target}
             header={header}
+            dialogDeleteInformation={dialogDeleteInformation}
+            dialogDisplay={dialogDisplay}
             />
         </Router.BrowserRouter>
         </>
