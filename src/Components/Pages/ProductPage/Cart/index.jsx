@@ -120,7 +120,7 @@ class Cart extends React.Component {
 
 
     render() {
-        const {target, updateData, header, updateArrayLikedData, cart} = this.props;
+        const {target} = this.props;
         const { liked, cartNumber } = this.state;
 
         return (

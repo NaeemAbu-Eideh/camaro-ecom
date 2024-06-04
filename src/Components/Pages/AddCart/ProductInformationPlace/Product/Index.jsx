@@ -36,7 +36,7 @@ class Product extends React.Component {
         };
         const newCart = [];
         for(let i = 0; i<cart.length;i++){
-            if(cart[i].key[0] != product.key[0])newCart.push(cart[i]);
+            if(cart[i].key[0] !== product.key[0])newCart.push(cart[i]);
             else{
                 newCart.push({
                     key:product.key,
@@ -75,7 +75,7 @@ class Product extends React.Component {
             };
             const newCart = [];
             for(let i = 0; i<cart.length;i++){
-                if(cart[i].key[0] != product.key[0])newCart.push(cart[i]);
+                if(cart[i].key[0] !== product.key[0])newCart.push(cart[i]);
                 else{
                     newCart.push({
                         key:product.key,
@@ -105,7 +105,7 @@ class Product extends React.Component {
     }
     
     handleRemove = async() =>{
-        const { header, cart, updateData, product, dialogDeleteInformation} = this.props;
+        const { header, cart, updateData, product} = this.props;
         let newHeader = {
             like: header.like,
             addCart: header.addCart- product.value.number_of_products,
@@ -121,7 +121,7 @@ class Product extends React.Component {
     }
 
     render() {
-        const {product, dialogDeleteInformation, dialogDisplay} = this.props;
+        const {product} = this.props;
         const { numberOfProducts } = this.state;
         return (
             <div className="productAtCart">

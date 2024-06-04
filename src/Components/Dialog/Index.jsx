@@ -17,7 +17,7 @@ class Dialog extends React.Component{
 
     }
     render(){
-        const{dialogDisplay, dialogDeleteInformation} = this.props;
+        const{dialogDisplay} = this.props;
         return(
             <div className='dialog' style={{display: dialogDisplay}}>
                 <h2 className='dialogTitle'><span className='dialogDeleteMessege'>Delete </span>{"nnnnn"}</h2>

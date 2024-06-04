@@ -4,7 +4,7 @@ import Header from "../Components/Header/Index";
 import Menu from "../Components/Menu/Index";
 import Body from "../Components/Index";
 import {fetchCartData, fetchData}from '../Config/DataActtions/GettingData';
-import { smartphone, audio, camera, cart, target, header, emptyTarget} from '../Variables/Variables';
+import { smartphone, audio, camera, cart, target, header} from '../Variables/Variables';
 
 class Ecom extends React.Component{
     constructor(props){

@@ -1,5 +1,4 @@
 import React from "react";
-import * as Routers from 'react-router-dom';
 import './Menu.css';
 import MenuLinks from "../../Router/MenuLinks/Index";
 
