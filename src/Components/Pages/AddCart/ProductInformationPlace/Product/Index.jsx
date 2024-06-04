@@ -106,16 +106,13 @@ class Product extends React.Component {
     
     handleRemove = async() =>{
         const { header, cart, updateData, product} = this.props;
-        await deleteCartProduct(`cart/${product.key[0]}`);
         let newHeader = {
             like: header.like,
             addCart: header.addCart- product.value.number_of_products,
             cartTotalPrice: header.cartTotalPrice - product.value.total_price
         };
-
         const newCart = this.removeFromCart(cart, product.key);
-
-        updateData({header:newHeader, cart:newCart});
+        updateData({dialogDisplay:'block', dialogDeleteInformation:{header:newHeader, cart: newCart, key:product.key[0]}});
     }
 
     removeFromCart(array, key) {
