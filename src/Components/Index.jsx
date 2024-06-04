@@ -6,7 +6,7 @@ import AddCart from './Pages/AddCart/Index';
 import SubscribeBar from './SubscribeBar/Index';
 import Footer from './Footer/Index';
 import { Routes, Route } from 'react-router-dom';
-// import Dialog from './Dialog/Index.jsx';
+import Dialog from './Dialog/Index.jsx';
 
 
 
@@ -67,7 +67,7 @@ class Body extends React.Component {
                 <div className='pageBodySections'>
                     <Footer />
                 </div>
-                {/* <Dialog dialogDisplay={dialogDisplay} updateData={updateData} v={dialogDeleteInformation}/> */}
+                <Dialog dialogDisplay={dialogDisplay} updateData={updateData} v={dialogDeleteInformation}/>
             </div>
         );
     }

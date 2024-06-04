@@ -1,0 +1,30 @@
+.dialog{
+    width: 514px;
+    background-color: #121212;
+    position: absolute;
+    top: 286px;
+    left: 778px;
+    
+
+}
+.dialogTitle{
+    margin-top: 42px;
+    color: white;
+    margin-left: 33px;
+}
+.dialogBody{
+    color: white;
+    margin-left: 33px;
+}
+.dialogDeleteMessege{
+    color: #ED4135;
+}
+.yesCancelButtons{
+     color: #8CC4F1;
+    background-color: #121212;
+    border: 1px solid #121212;
+    margin-left: 33px;
+    padding-bottom: 48px;
+    font-size: 17px;
+    font-weight: bold;
+}
