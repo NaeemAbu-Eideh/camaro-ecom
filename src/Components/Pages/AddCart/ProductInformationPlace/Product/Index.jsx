@@ -112,7 +112,7 @@ class Product extends React.Component {
             cartTotalPrice: header.cartTotalPrice - product.value.total_price
         };
         const newCart = this.removeFromCart(cart, product.key);
-        updateData({dialogDisplay:'block', dialogDeleteInformation:{header:newHeader, cart: newCart, key:product.key[0]}});
+        updateData({dialogDisplay:'block', dialogDeleteInformation:{header:newHeader, cart: newCart, key:product.key[0], product:product}});
         
     }
 

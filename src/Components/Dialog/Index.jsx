@@ -5,6 +5,12 @@ import { deleteCartProduct } from '../../Config/DataActtions/DeleteData';
 
 
 class Dialog extends React.Component{
+
+    constructor(props){
+        super(props);
+    }
+
+
     handelCancelClick = ()=>{
         const{updateData} = this.props;
         updateData({dialogDisplay:'none'});
@@ -17,15 +23,28 @@ class Dialog extends React.Component{
 
     }
     render(){
-        const{dialogDisplay} = this.props;
-        return(
-            <div className='dialog' style={{display: dialogDisplay}}>
-                <h2 className='dialogTitle'><span className='dialogDeleteMessege'>Delete </span>{"nnnnn"}</h2>
-                <h3 className='dialogBody'>Are you sure you want to delete <span className='dialogDeleteMessege'>{'2'}</span> items of <span className='dialogDeleteMessege'>{'naeem'}</span>?</h3>
-                <button className='yesCancelButtons' onClick={this.handelYesClick}>Yes</button>
-                <button className='yesCancelButtons' onClick={this.handelCancelClick}>Cancel</button>
-            </div>
-        );
+        const{dialogDisplay, dialogDeleteInformation} = this.props;
+        const product = dialogDeleteInformation.product;
+        if(dialogDeleteInformation.key[0] != 'zero'){
+            return(
+                <div className='dialog' style={{display: dialogDisplay}}>
+                    <h2 className='dialogTitle'><span className='dialogDeleteMessege'>Delete </span>{product.value.product.name}</h2>
+                    <h3 className='dialogBody'>Are you sure you want to delete <span className='dialogDeleteMessege'>{product.value.number_of_products}</span> items of <span className='dialogDeleteMessege'>{product.value.product.name}</span>?</h3>
+                    <button className='yesCancelButtons' onClick={this.handelYesClick}>Yes</button>
+                    <button className='yesCancelButtons' onClick={this.handelCancelClick}>Cancel</button>
+                </div>
+            );
+        }
+        else{
+            return(
+                <div className='dialog' style={{display: dialogDisplay}}>
+                    <h2 className='dialogTitle'><span className='dialogDeleteMessege'>Delete </span>{""}</h2>
+                    <h3 className='dialogBody'>Are you sure you want to delete <span className='dialogDeleteMessege'>{0}</span> items of <span className='dialogDeleteMessege'>{""}</span>?</h3>
+                    <button className='yesCancelButtons' onClick={this.handelYesClick}>Yes</button>
+                    <button className='yesCancelButtons' onClick={this.handelCancelClick}>Cancel</button>
+                </div>
+            );
+        }
     }
 }
 

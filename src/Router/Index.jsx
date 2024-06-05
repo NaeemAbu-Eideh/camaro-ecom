@@ -17,7 +17,7 @@ class Ecom extends React.Component{
             target:target,
             header:header,
             dialogDisplay:'none',
-            dialogDeleteInformation:{}
+            dialogDeleteInformation:{key:['zero']}
         }
         this.updateData=this.updateData.bind(this);
         this.updateArrayLikedData = this.updateArrayLikedData.bind(this);
