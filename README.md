@@ -1,12 +1,12 @@
 ## Camaro E-commerce
-Camaro E-commerce is a web-based platform where customers can purchase smartphones, tablets, laptops, photography gear, and other electronic goods. The platform is designed to offer a seamless and dynamic shopping experience using modern web technologies.
+Camaro E-commerce is an online platform where people can buy smartphones, tablets, laptops, photography gear and other electronic goods. This platform is meant to provide a smooth and real time shopping experience using modern web technologies.
 
 
 ## Features:
-- Single Page Application: Built using React.JS for a dynamic and responsive user experience.
-- Reusable UI Components: Frontend components developed with React to ensure high performance and reusability.
-- Seamless Navigation: Implemented with React Router for smooth transitions and efficient navigation between pages.
-- Scalable Database: Managed with Firebase to provide a comprehensive and scalable solution for data storage.
+- Single Page Application: Built with React.JS to create a dynamic and responsive user experience.
+- Reusable UI Components: Frontend components built on the React framework, guaranteeing their high performance and reusability.
+- Seamless Navigation: Done with React Router, which makes it smooth to change pages without reloading them.
+- Scalable Database: Managed through Firebase to offer an all-inclusive and scalable solution for storing data.
 
 
 ## Technologies Used:
@@ -14,4 +14,9 @@ Camaro E-commerce is a web-based platform where customers can purchase smartphon
   - React.JS
 - Backend:
   - Firebase
+ 
+## How run application:
+- Clone the repo
+- install react.js framework on your laptop and setup it
+
 
