@@ -8,3 +8,10 @@ Camaro E-commerce is a web-based platform where customers can purchase smartphon
 - Seamless Navigation: Implemented with React Router for smooth transitions and efficient navigation between pages.
 - Scalable Database: Managed with Firebase to provide a comprehensive and scalable solution for data storage.
 
+
+## Technologies Used:
+- Frontend:
+  - React.JS
+- Backend:
+  - Firebase
+
